@@ -1,0 +1,249 @@
+Computer science 
+HND1
+H/CS/23/1113
+Adebanji Bidemi Olayiwola 
+
+
+1. using System;
+ 
+                class Program
+                 {
+static void Main(string[] args)
+{
+// Prompt the user to input three numbers
+Console.WriteLine("Enter three numbers:");
+ 
+// Read the input from the user
+Console.Write("Number 1: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+ 
+Console.Write("Number 2: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+ 
+Console.Write("Number 3: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+ 
+// Sort the numbers in ascending order
+int temp;
+if (num1 > num2)
+{
+temp = num1;
+num1 = num2;
+num2 = temp;
+}
+if (num2 > num3)
+{
+temp = num2;
+num2 = num3;
+num3 = temp;
+}
+if (num1 > num2)
+{
+temp = num1;
+num1 = num2;
+num2 = temp;
+}
+ 
+// Output the numbers in ascending order
+Console.WriteLine("Numbers in ascending order: {0}, {1}, {2}", num1, num2, num3);
+}
+}
+ 
+ 
+ 
+ 
+ 
+ 
+2. <?php
+function smallestIndex($array, $size) {
+   if ($size <= 0) {
+       return -1; // Return -1 if the array is empty or size is invalid
+   }
+ 
+   $smallest_index = 0; // Assume the smallest element is at index 0
+ 
+   for ($i = 1; $i < $size; $i++) {
+       if ($array[$i] < $array[$smallest_index]) {
+           $smallest_index = $i; // Update the index of the smallest element
+       }
+   }
+ 
+   return $smallest_index;
+}
+ 
+// Test the function
+$test_array = [5, 3, 9, 1, 7];
+$array_size = count($test_array);
+$index_of_smallest = smallestIndex($test_array, $array_size);
+ 
+echo "Array: [" . implode(", ", $test_array) . "]\n";
+echo "Index of the smallest element: " . $index_of_smallest . "\n";
+?>
+ 
+ 
+3. using System;
+ 
+class Program
+{
+static void Main(string[] args)
+{
+// Prompt the user to input a string
+Console.WriteLine("Enter a string:");
+ 
+// Read the input string from the user
+string inputString = Console.ReadLine();
+ 
+// Convert the string to uppercase using a character array
+char[] charArray = inputString.ToCharArray();
+ 
+for (int i = 0; i < charArray.Length; i++)
+{
+// Convert each character to uppercase
+charArray[i] = Char.ToUpper(charArray[i]);
+}
+ 
+// Output the string in uppercase
+string upperCaseString = new string(charArray);
+Console.WriteLine("String in uppercase: " + upperCaseString);
+}
+}
+ 
+ 
+4. using System;
+ 
+class Program
+{
+static void Main(string[] args)
+{
+// Prompt the user to enter the size of the matrices
+Console.WriteLine("Enter the number of rows for the matrices:");
+int rows = Convert.ToInt32(Console.ReadLine());
+ 
+Console.WriteLine("Enter the number of columns for the matrices:");
+int cols = Convert.ToInt32(Console.ReadLine());
+ 
+// Create matrices
+int[,] matrix1 = new int[rows, cols];
+int[,] matrix2 = new int[rows, cols];
+int[,] sumMatrix = new int[rows, cols];
+ 
+// Input for first matrix
+Console.WriteLine("Enter elements for the first matrix:");
+InputMatrix(matrix1);
+ 
+// Input for second matrix
+Console.WriteLine("Enter elements for the second matrix:");
+InputMatrix(matrix2);
+ 
+// Compute the sum of matrices
+for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < cols; j++)
+{
+sumMatrix[i, j] = matrix1[i, j] + matrix2[i, j];
+}
+}
+ 
+// Display the sum matrix
+Console.WriteLine("Sum of the matrices:");
+DisplayMatrix(sumMatrix);
+}
+ 
+// Method to input elements for a matrix
+static void InputMatrix(int[,] matrix)
+{
+int rows = matrix.GetLength(0);
+int cols = matrix.GetLength(1);
+ 
+for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < cols; j++)
+{
+Console.Write("Enter element at position [{0},{1}]: ", i, j);
+matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+}
+}
+}
+ 
+// Method to display a matrix
+static void DisplayMatrix(int[,] matrix)
+{
+int rows = matrix.GetLength(0);
+int cols = matrix.GetLength(1);
+ 
+for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < cols; j++)
+{
+Console.Write(matrix[i, j] + "\t");
+}
+Console.WriteLine();
+}
+}
+}
+ 
+ 
+ 
+5. using System;
+ 
+class Program
+{
+static void Main(string[] args)
+{
+// Declare and initialize the array
+float[] alpha = new float[50];
+ 
+// Initialize the array
+for (int i = 0; i < 50; i++)
+{
+if (i < 25)
+{
+alpha[i] = i * i; // Square of the index variable
+}
+else
+{
+alpha[i] = 3 * i; // Three times the index variable
+}
+}
+ 
+// Output the array with 10 elements per line
+Console.WriteLine("Array elements:");
+for (int i = 0; i < 50; i++)
+{
+Console.Write(alpha[i] + "\t");
+if ((i + 1) % 10 == 0) // Print newline after every 10 elements
+{
+Console.WriteLine();
+}
+}
+}
+}
+ 
+ 
+ 
+6. using System;
+ 
+class Program
+{
+static void Main(string[] args)
+{
+// Prompt the user to input a number
+Console.WriteLine("Enter a number:");
+double number = Convert.ToDouble(Console.ReadLine());
+ 
+// Check if the number is positive, negative, or zero
+if (number > 0)
+{
+Console.WriteLine("{0} is a positive number.", number);
+}
+else if (number < 0)
+{
+Console.WriteLine("{0} is a negative number.", number);
+}
+else
+{
+Console.WriteLine("The number is zero.");
+}
+}
+}
+ 
